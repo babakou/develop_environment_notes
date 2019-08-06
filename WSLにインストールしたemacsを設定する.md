@@ -25,9 +25,10 @@ cd /mnt/c/Users/babakou/local/wsl_emacs/mozc_emacs_helper
 ./mozc_emacs_helper.exe "$@" | cat
 ```
 
-作ったらPATHが通っているフォルダに移す
+作ったらPATHが通っているフォルダに移して、実行権限を付与
 ```
 $ sudo mv mozc_emacs_helper.sh /usr/local/bin
+$ sudo chmod 755 /usr/local/bin/mozc_emacs_helper.sh
 ```
 
 mozc, mozc-im, mozc-popupをインストールする
@@ -38,13 +39,7 @@ mozc-popup.elは[ここ](https://github.com/d5884/mozc-popup/blob/master/mozc-po
 mozc-cursor-color.elは[ここ](https://github.com/iRi-E/mozc-el-extensions/blob/master/mozc-cursor-color.el)
 mozc-popup.elに必要なpopup.elは[ここ](https://github.com/auto-complete/popup-el/blob/master/popup.el)
 
-あと適当にmozcの設定をコピペして動かしてみたら、
-IMEのトグルはできてるっぽいものの、Communication error with the helper process と出て日本語入力できない。
-[ここ](http://listserv.linux.or.jp/pipermail/vine-users/2013-December/002284.html)を参考にmozc_emacs_helperを/usr/binに置いた
-```
-sudo ln -s /path/to/mozc_emacs_helper /usr/bin/mozc_emacs_helper
-```
-そしたら動いた！
+あと適当にmozcの設定をコピペして動かしてみたら動いた
 IMEのトグルを<zenkaku-hankaku>にすると、なぜかIMEの切り替えが止まらなくなるので、
 泣く泣くC-oのまま...
 

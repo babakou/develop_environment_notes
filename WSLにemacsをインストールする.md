@@ -39,7 +39,7 @@ umask 022
 export DISPLAY=localhost:0.0
 
 # export NO_AT_BRIDGE=1
-# export LIBGL_ALWAYS_INDIRECT=1
+export LIBGL_ALWAYS_INDIRECT=1
 # export GIGACAGE_ENABLED=no
 ```
 
