@@ -43,6 +43,18 @@ mozc-popup.elに必要なpopup.elは[ここ](https://github.com/auto-complete/po
 IMEのトグルを<zenkaku-hankaku>にすると、なぜかIMEの切り替えが止まらなくなるので、
 泣く泣くC-oのまま...
 
+### やはりC-\で日本語入力に切り替えたい
+IMEが切り替わりまくる現象に手を打つ。
+[ここ](https://vogel.at.webry.info/201903/article_1.html)参考
+```
+sudo apt install x11-xserver-utils <-- xsetを使うために必要
+```
+.bashrcに以下追加
+```
+xset -r 49
+```
+その後切り替えを半角/全角にしたら普通に動いた。神
+
 ## フォントの設定
 ### 参考
 ここのフォントの設定あたりを参考に
