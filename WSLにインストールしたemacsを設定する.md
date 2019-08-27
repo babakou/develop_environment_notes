@@ -47,8 +47,9 @@ IMEのトグルを<zenkaku-hankaku>にすると、なぜかIMEの切り替えが
 IMEが切り替わりまくる現象に手を打つ。
 [ここ](https://vogel.at.webry.info/201903/article_1.html)参考
 ```
-sudo apt install x11-xserver-utils <-- xsetを使うために必要
+sudo apt install x11-xserver-utils  xsetを使うために必要
 ```
+
 .bashrcに以下追加
 ```
 xset -r 49
@@ -64,3 +65,11 @@ xset -r 49
 $ sudo ln -s /mnt/c/Windows/Fonts /usr/share/fonts/windows
 $ sudo fc-cache -fv
 ```
+
+### せっかくなのでもっとフォントをきれいに
+[ここらへん](https://qiita.com/nishemon/items/bb3aca972404f68bfcd6)を参考に
+
+正直よく分からなかった。
+とりあえずvcxsrv実行時の引数に-dpi xxxで大きめの数字を渡すと文字がデカくなって滑らかになる。
+でもそれなら普通にフォントサイズデカくすれば良いだけ...
+
